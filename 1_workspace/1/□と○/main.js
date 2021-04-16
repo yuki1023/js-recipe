@@ -12,8 +12,20 @@ const figure = document.getElementById("figure")
 
 // }
 
-figure.onmouseenter = function() {
-    figure.classList.toggle("rounded")
+figure.onclick = function() {
+
+    if (figure.className === "transition square"){
+        figure.classList.add("rounded")
+    }else if (figure.className === "transition square rounded"){
+        figure.classList.remove("rounded")
+        figure.classList.remove("square")
+        figure.classList.add("triangle")
+    }else if(figure.className === "transition triangle") {
+        figure.classList.remove("triangle")
+        figure.classList.add("square")
+    }
+
     
+
     
 }
