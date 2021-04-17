@@ -4,68 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-    <div id="display">ここに何かが表示される</div>
-    <button id="button">クリック！</button>
+  <h1>この画像はなんでしょう？</h1>
+  <div>
+    <img
+    src = "./manatsu.jpeg"
+    alt = "画像が読みこませんでした"
 
-    <script>
-// TRY2
-        const kisuuFromX1 = function (x1) {
-          return 3*x1 + 1
-        }
+    class="manatsu"
 
-        const kisuuFromX2 = function (x2) {
-          return 10**x2
-        }
-
-        const kisuuFromX3 = function (x3) {
-          return kisuuFromX1(x3) + kisuuFromX2(x3)
-        }
-
-        // TRY3
-        const multiply = function(x,y){
-            return x + y
-        }
-
-        const plusRound = function(x,y){
-            return Math.round(x+y)
-        }
-        
-        // const sayHelloTo = function (name) {
-        //     alert("Hello, " + name + "!")
-        // }
-
-        // sayHelloTo("yuki")
+    />
 
 
+  </div>
 
-        // const alertTime = function () {
-        //     alert(new Date().toLocaleString())
-        // }
+  <div>
 
-        // alertTime()
+    <button id = "choice1">白石麻衣</button>
+    <button id = "choice2">秋元真夏</button>
+    <button id = "choice3">松村沙友理</button>
 
+  </div>
+  <div id = "display"></div>
 
-
-        let count = 0
-
-        const countUp = function () {
-            count += 1
-        }
-
-        countUp()
-        console.log(count)
-
-        countUp()
-        countUp()
-        console.log(count)
-
-        console.log(document)
-
-        console.dir(window)
-
-
-    </script>
+  <script src ="./main.js"></script>
+  　 
 </body>
 </html>
