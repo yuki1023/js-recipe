@@ -4,13 +4,15 @@ const addButton = document.getElementById("add-button")
 
 
 
-addButton.onclick = function(){
+function create(){
     // カードを作成する
   const card = createCard(inputElement.value)
   container.append(card)
 
     // 入力欄をからにする
     inputElement.value = ""
+
+    return false;
 
    
 }
@@ -47,6 +49,7 @@ const createCard = function(text){
 
 
 }
+
 
 
 
