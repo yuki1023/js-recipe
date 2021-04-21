@@ -10,7 +10,7 @@ addButton.onclick = function(){
   container.append(card)
 
     // 入力欄をからにする
-    inputElement.text = ""
+    inputElement.value = ""
 
    
 }
@@ -30,11 +30,6 @@ const createCard = function(text){
  
      // todoをカードの中に追加
      card.append(todo)
- 
-     // カードをcontainerの中に追加
-     container.append(card)
- 
-     
      
      // 削除ボタン を作成
      const deleteButton = document.createElement("div")
@@ -48,7 +43,7 @@ const createCard = function(text){
      // 削除ボタン を card の中に追加する
      card.append(deleteButton)
  
-     return text
+     return card
 
 
 }
