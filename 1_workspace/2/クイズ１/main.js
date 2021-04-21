@@ -3,6 +3,7 @@ const quizImage = document.getElementById("quiz-image")
 const choice1 = document.getElementById("choice-1")
 const choice2 = document.getElementById("choice-2")
 const choice3 = document.getElementById("choice-3")
+const choice4 = document.getElementById("choice-4")
 const feedback = document.getElementById("feedback")
 
 // choice1.onclick = function() {
@@ -38,6 +39,11 @@ const quiz ={
             feedback:"残念！松村沙友理はもっと可愛いよ！！",
 
         },
+        {
+            text:"斎藤飛鳥",
+            feedback:"残念！斎藤飛鳥はもっとおバカだよ！！",
+
+        },
     ],
 
 
@@ -55,6 +61,7 @@ const reloadQuiz = function(){
     console.log(choice1.textContent)
     choice2.textContent = quiz.choices[1].text
     choice3.textContent = quiz.choices[2].text
+    choice4.textContent = quiz.choices[3].text
 }
 
 
@@ -77,6 +84,11 @@ choice1.onclick = function() {
     choose(2)
 
 
+  }
+
+  choice4.onclick = function() {
+    // ガニメデを選択
+    choose(3)
   }
 
   // reloadQuiz関数 を実行して、クイズを画面に表示する
