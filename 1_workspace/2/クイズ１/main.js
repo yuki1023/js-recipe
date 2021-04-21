@@ -19,23 +19,23 @@ const feedback = document.getElementById("feedback")
 
 // クイズの内容
 const quiz ={
-    text:"この星の名前はなんでしょう？",
-    image:"Ganymede.jpg",
+    text:"この画像は誰でしょう？？",
+    image:"manatsu.jpeg",
     choices:[
         
         {
-            text:"ゼニガメ",
-            feedback:"残念！ゼニガメは、クサガメまたはニホンイシガメの幼体だよ。",
+            text:"白石麻衣",
+            feedback:"残念！白石麻衣はもっと美人だよ！",
 
         },
         {
-            text:"ゴリアテ",
-            feedback:"残念！ゴリアテは、旧約聖書に登場するダビデに石で殺される巨人だよ。",
+            text:"秋元真夏",
+            feedback:"正解！まなったんでしたぁ〜〜❤︎",
 
         },
         {
-            text:"ガニメデ",
-            feedback:"正解！ガニメデは、木星の第三惑星だよ！",
+            text:"松村沙友理",
+            feedback:"残念！松村沙友理はもっと可愛いよ！！",
 
         },
     ],
