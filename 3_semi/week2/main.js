@@ -21,6 +21,7 @@ if (localStorage.list) {
 
 addButton.onclick = function () {
   const text = input.value
+  console.log(text)
 
   // 状態の更新 list: ["こんにちは"] -> ["こんにちは", "こんばんは"]
   list.push(text)
