@@ -1,21 +1,28 @@
-const inputElement = document.getElementById("memo-input");
-const container = document.getElementById("memo-container");
-const addButton = document.getElementById("add-button");
 
-
-addButton.onclick = function () {
-    const text = inputElement.value
-  
+      const input = document.getElementById("memo-input")
+      const button = document.getElementById("add-button")
+      const memo = document.getElementById("memo-container")
+      let memos = []
+      if (localStorage.memo1) {
+        const memosJson = localStorage.memo1
+        memos = JSON.parse(memosJson)
+        for (let i = 0; i < memos.length; i++) {
+          const div = document.createElement("div")
+          div.className = "pokemonn"
+          div.textContent = memos[i]
+          memo.append(div)
+        }
+      }
+      console.log(memos)
+      button.onclick = function() {
+        const text = input.value
+        memos.push(text)
+        input.value = ""
+        console.log(memos)
+        localStorage.memo1 = JSON.stringify(memos)
+        const div = document.createElement("div")
+        div.className = "pokemonn"
+        div.textContent = text
+        memo.append(div)
+      }
     
-    // list.push(text)
-    // localStorage.list = JSON.stringify(list)
-  
-    console.log(text)
-
-    const card = document.createElement("div")
-    card.className = "pokemon"
-    card.textContent = text
-    container.append(card)
-  
-    inputElement.value = ""
-  };

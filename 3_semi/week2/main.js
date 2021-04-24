@@ -27,11 +27,7 @@ addButton.onclick = function () {
   list.push(text)
   localStorage.list = JSON.stringify(list)
 
-  // 状態の変化を画面に表示する
-  const card = document.createElement("div")
-  card.className = "card"
-  card.textContent = text
-  container.append(card)
+  document.location.reload();
 
   input.value = ""
 };
@@ -40,7 +36,7 @@ removeAllButton.onclick = function(){
     list = []
     localStorage.list = JSON.stringify(list)
 
-    container.textContent = ""
+    document.location.reload();
 
 
 
