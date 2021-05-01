@@ -39,16 +39,20 @@ const createImage = (drink) => {
   return figure;
 };
 
+const setDefault = function () {
+    // 現在の所持金
+    displayMyMoney.textContent = myMoney;
+    // 投入金額
+    amountMoneyDisplay.textContent = amountMoney;
+  };
+
 useButton.onclick = () => {
   if (myMoney >= 100) {
     // 金額計算
     myMoney -= 100;
     amountMoney += 100;
     // 表示
-    // 現在の所持金
-    displayMyMoney.textContent = myMoney;
-    // 投入金額
-    amountMoneyDisplay.textContent = amountMoney;
+    setDefault();
   }
 };
 
@@ -57,7 +61,7 @@ teaButton.onclick = () => {
     amountMoney -= 100;
     const image = createImage("tea");
     display.append(image);
-    amountMoneyDisplay.textContent = amountMoney;
+    setDefault();
   }
 };
 
@@ -66,7 +70,7 @@ cokeButton.onclick = () => {
     amountMoney -= 130;
     const image = createImage("coke");
     display.append(image);
-    amountMoneyDisplay.textContent = amountMoney;
+    setDefault();
   }
 };
 
@@ -74,6 +78,5 @@ reverseButton.onclick = () => {
   myMoney += amountMoney;
   amountMoney = 0;
 
-  displayMyMoney.textContent = myMoney;
-  amountMoneyDisplay.textContent = amountMoney;
+  setDefault();
 };
